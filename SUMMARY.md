@@ -1,9 +1,6 @@
 # Open-rest 手册
 
-* [Introduction](README.md)
-  * [安装](introduction/install.md)
-  * [快速开始](introduction/quick-start.md)
-  * [目录结构约定](introduction/directiory.md)
+* [整体介绍](README.md)
 * [对外变量](exports/README.md)
   * [Router](exports/router.md)
   * [helper](exports/helper.md)
