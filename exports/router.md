@@ -1,29 +1,29 @@
 # Router
------------------------
 
 指向 [open-router](https://github.com/open-node/open-router) 库包
 
-open-router 是 open-rest 使用的一个依赖，他的作用是给 restify 提供一个高效、简介的路由功能
+> open-router 是 open-rest 使用的一个依赖，他的作用是给 restify 提供一个高效、简介的路由功能
 
-应用开发人员一般不用直接使用他，只需要在约定的 ./app/routers.js 里使用 Router 的实例即可
+> 应用开发人员一般不用直接使用他，只需要在约定的 ./app/routers.js 里使用 Router 的实例即可
 
-Router 的初始化是 open-rest 完成的
+> Router 的初始化是 open-rest 完成的
 
 [![Build status](https://api.travis-ci.org/open-node/open-router.svg?branch=master)](https://travis-ci.org/open-node/open-router)
 [![codecov](https://codecov.io/gh/open-node/open-router/branch/master/graph/badge.svg)](https://codecov.io/gh/open-node/open-router)
 [![NPM version](https://img.shields.io/npm/v/open-router.svg?style=flat-square)](https://www.npmjs.com/package/open-router)
 
 
-# Router 实例的用法，即 ./app/routers.js 的定义
------------------------
-./app/routers.js 按照我们对目录的约定，这里会定义所有的路由规则以及对应的控制器方法，
-换言之他是把 verb path 和 controller method 链接起来的桥梁
+### Router 实例的用法，即 ./app/routers.js 的定义
 
-./app/routers.js 需要通过 module.exports 释放一个函数，这个函数会有一个参数，这个参数就是 open-router 的实例
+> ./app/routers.js 按照我们对目录的约定，这里会定义所有的路由规则以及对应的控制器方法，
+
+> 换言之他是把 verb path 和 controller method 链接起来的桥梁
+
+> ./app/routers.js 需要通过 module.exports 释放一个函数，这个函数会有一个参数，这个参数就是 open-router 的实例
 
 
-# Example
-----------------------
+### Example
+
 ```js
 module.exports = (r) => {
   /** 首页默认路由 */
@@ -47,15 +47,14 @@ module.exports = (r) => {
 }
 ```
 
-这个函数的执行是 open-rest 来控制的，你可以不用关注他的执行。这里的参数 `r` 就是 open-router 的实例
+> 这个函数的执行是 open-rest 来控制的，你可以不用关注他的执行。这里的参数 `r` 就是 open-router 的实例
 
 
-# Methods
-----------------------------
+### 方法
 
-### router.get(routePath, actionPath)
+#### router.get(routePath, actionPath)
 
-用于获取资源详情或者列表, 成功状态码  200
+> 用于获取资源详情或者列表, 成功状态码  200
 
 HTTP.verb `GET`
 
@@ -70,11 +69,11 @@ router.get('/users/:id', 'user#detail'); // 当通过 GET 方法请求 `/users/:
 
 ```
 
-### router.put(routePath, actionPath)
+#### router.put(routePath, actionPath)
 
 HTTP.verb `PUT`
 
-用于修改某个资源描述, 成功状态码 200
+> 用于修改某个资源描述, 成功状态码 200
 
 __Arguments__
 * `routePath` - 路由路径 ，例如 `/users/:id` or `/users/:userId/books`
@@ -85,14 +84,13 @@ __Example__
 router.put('/users/:id', 'user#modify'); // 当通过 PUT 方法请求 `/users/:id`, ./app/controllers/user.js 的 modify 对应的方法组被调用
 ```
 
-### router.patch(routePath, actionPath) 同上 put
+#### router.patch(routePath, actionPath) 同上 put
 
-
-### router.post(routePath, actionPath)
+#### router.post(routePath, actionPath)
 
 HTTP.verb `POST`
 
-一般用于资源的创建, 成功状态码 201
+> 一般用于资源的创建, 成功状态码 201
 
 __Arguments__
 * `routePath` - 路由路径 ，例如 `/users/:id` or `/users/:userId/books`
@@ -103,8 +101,8 @@ __Example__
 router.post('/users', 'user#add'); // 当通过 POST 方法请求 `/users`, ./app/controllers/user.js 的 add 对应的方法组被调用
 ```
 
-### router.del(routePath, actionPath)
-一般用于删除某个资源，成功状态码 204
+#### router.del(routePath, actionPath)
+> 一般用于删除某个资源，成功状态码 204
 
 HTTP.verb `DELETE`
 
@@ -118,11 +116,11 @@ router.del('/users', 'user#add'); // 当通过 DELETE 方法请求 `/users`, ./a
 ```
 
 
-### router.resource(name, [routePath])
+#### router.resource(name, [routePath])
 
 HTTP.verb `DELETE` or `GET` or `PATCH` or `PUT`
 
-一般用于全局资源，比如系统用户，会自动添加资源的增、删、改、查(列表和详情) 全部的接口
+> 一般用于全局资源，比如系统用户，会自动添加资源的增、删、改、查(列表和详情) 全部的接口
 
 __Arguments__
 
@@ -156,11 +154,11 @@ router.resource('weiboUser', '/weibo/users');
 // router.post('/weibo/users', 'weiboUser#add');
 ```
 
-### router.model(name, routePath)
+#### router.model(name, routePath)
 
 HTTP.verb `DELETE` or `GET` or `PATCH` or `PUT`
 
-一般用于对用于相同路由路径的单个资源的 `查`, `删`, `改` 操作
+> 一般用于对用于相同路由路径的单个资源的 `查`, `删`, `改` 操作
 
 __Arguments__
 
@@ -187,11 +185,11 @@ router.model('user', '/systems/users')
 // router.delete('/systems/users/:id', 'user#remove');
 ```
 
-### router.collection(name, routePath)
+#### router.collection(name, routePath)
 
 HTTP.verb `POST` or `GET`
 
-一般用于对用于相同路由路径的资源集合的 `查`, `增` 操作
+> 一般用于对用于相同路由路径的资源集合的 `查`, `增` 操作
 
 __Arguments__
 
