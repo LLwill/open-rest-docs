@@ -1,0 +1,22 @@
+{
+  "title": "open-rest 使用手册",
+  "author": "Redstone Zhao",
+  "description": "介绍 open-rest 的用法，以及插件的开发，安装，使用，以及测试的写法",
+  "language": "zh-hans",
+  "gitbook": ">=3.0.0",
+  "root": ".",
+  "links": {
+    "sidebar": {
+      "Home": "https://github.com/open-node/open-rest"
+    }
+  },
+  "plugins": [
+    "disqus",
+    "splitter"
+  ],
+  "pluginsConfig": {
+    "disqus": {
+      "shortName": "open-rest-gitbook"
+    }
+  }
+}
