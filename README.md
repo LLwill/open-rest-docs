@@ -1,19 +1,18 @@
 # open-rest 手册
-------------------------------
 
-基于 [restify](https://github.com/restify/node-restify) 快速实现的标准 restful api
+> 基于 [restify](https://github.com/restify/node-restify) 快速实现的标准 restful api
 
 [![Build status](https://api.travis-ci.org/open-node/open-rest.svg?branch=master)](https://travis-ci.org/open-node/open-rest)
 [![codecov](https://codecov.io/gh/open-node/open-rest/branch/master/graph/badge.svg)](https://codecov.io/gh/open-node/open-rest)
 [![NPM version](https://img.shields.io/npm/v/open-rest.svg?style=flat-square)](https://www.npmjs.com/package/open-rest)
 
 
-# 环境要求
+## 环境要求
 ------------------------------
 Node.js version 6 以上，最好直接使用 Node.js 8 这样可以放心的使用 async/await 而不用考虑 babel 转换的事情
 
 
-# 快速开始
+## 快速开始
 ------------------------------
 建议使用样本工程直接开始，这样能酱烧很多工作量
 
@@ -31,7 +30,11 @@ npm run setup
 ```
 
 
-# 目录结构约定
+## 编码规范
+- 按照 eslint-airbnb 风格执行,
+- 仅修改了少数几个规则，具体参考样本工程项目下的 .eslintrc
+
+## 目录结构约定
 ------------------------------
 <pre>
 ├── app
@@ -53,7 +56,8 @@ npm run setup
 注: 项目下新增的目录一定要在目录里放置一个 README.md 用来说明该目录的作用
 
 
-# MIT license
+## MIT license
+-------------------------------
 
 * Copyright (c) 2017 open-node
 * Author Redstone Zhao
