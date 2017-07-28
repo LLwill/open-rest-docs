@@ -17,7 +17,7 @@
 > 建议使用样本工程直接开始，这样能酱烧很多工作量
 
 ```bash
-// 克隆样本功能
+// 克隆样本工程
 git clone git@github.com:open-node/open-rest-es6-boilerplate.git myApp
 cd myApp
 
