@@ -14,7 +14,7 @@
   * [open-rest-with-mysql](plugins/open-rest-with-mysql.md)
   * [open-rest-access-log](plugins/open-rest-access-log.md)
   * [open-rest-helper-getter](plugins/open-rest-helper-getter.md)
-  * [open-rest-helper-assets](plugins/open-rest-helper-assets.md)
+  * [open-rest-helper-assert](plugins/open-rest-helper-assert.md)
   * [open-rest-helper-params](plugins/open-rest-helper-params.md)
   * [open-rest-helper-rest](plugins/open-rest-helper-rest.md)
 * [测试](test/README.md)
