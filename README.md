@@ -7,7 +7,7 @@
 [![NPM version](https://img.shields.io/npm/v/open-rest.svg?style=flat-square)](https://www.npmjs.com/package/open-rest)
 
 
-## 环境要求
+### 环境要求
 ------------------------------
 > Node.js version 6 以上，最好直接使用 Node.js 8 这样可以放心的使用 async/await 而不用考虑 babel 转换的事情
 
