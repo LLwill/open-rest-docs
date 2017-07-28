@@ -5,18 +5,26 @@
   "language": "zh-hans",
   "gitbook": ">=3.0.0",
   "root": ".",
-  "links": {
-    "sidebar": {
-      "Home": "https://github.com/open-node/open-rest"
-    }
-  },
   "plugins": [
+    "-lunr",
+    "-search",
+    "search-plus",
     "disqus",
-    "splitter"
+    "splitter",
+    "github-buttons"
   ],
   "pluginsConfig": {
     "disqus": {
       "shortName": "open-rest-gitbook"
+    },
+    "github-buttons": {
+      "repo": "zhangjikai/gitbook-use",
+      "types": [
+        "star",
+        "watch",
+        "fork"
+      ],
+      "size": "small"
     }
   }
 }
