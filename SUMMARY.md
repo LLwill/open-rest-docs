@@ -9,6 +9,8 @@
   * [errors](exports/errors.md)
   * [restify](exports/restify.md)
   * [start](exports/start.md)
+* [Controller](controller/README.md)
+* [Model](model/README.md)
 * [Plugins](plugins/README.md)
   * [open-i18n](plugins/open-i18n.md)
   * [open-rest-with-mysql](plugins/open-rest-with-mysql.md)
